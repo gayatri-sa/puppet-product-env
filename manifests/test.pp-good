@@ -1,0 +1,4 @@
+$var = 'My test content'
+file {'/test.txt':
+    content => $var
+}

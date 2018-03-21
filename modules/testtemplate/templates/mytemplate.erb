@@ -1,0 +1,5 @@
+I am a site.pp variable: <%= @siteppvariable %>
+I am a class variable: <%= @classvariable %>
+The OS of this machine from facter is <%= @osfamily %>
+This is a variable (using scope) from another class in the same module: <%= scope.lookupvar('testtemplate::newclass::var1') %>
+This is a variable (using scope) from another module: <%= scope.lookupvar('sampleclass::othermodulevariable') %>
