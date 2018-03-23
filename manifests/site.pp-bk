@@ -1,12 +1,7 @@
 node 'puppetnode2', 'puppetnode1' {
  include motd
-
- #include sampleclass
+ #include testmodule
  class { 'sampleclass': filecontent => 'I am an external line - PRODUCTION' }
-
- $siteppvariable = "SitePP value"
- include testtemplate::newclass
- include testtemplate
 }
 
 #node 'puppetnode1' {
@@ -15,5 +10,9 @@ node 'puppetnode2', 'puppetnode1' {
  #class { 'sampleclass': }
 #}
 node 'puppet' {
+ #$siteppvariable = "SitePP value"
  include motd
+ #include sampleclass
+ #include testtemplate::newclass
+ #include testtemplate
 }
