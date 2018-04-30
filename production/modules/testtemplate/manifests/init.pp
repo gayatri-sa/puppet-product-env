@@ -48,5 +48,8 @@ class testtemplate {
     file { '/output.txt':
 	content => template("${module_name}/mytemplate.erb");
     }
+    file { '/output2.txt':
+	content => epp("${module_name}/my-epp-template.epp", {'var1' => 'Var1 Value Here'});
+    }
 
 }

@@ -1,0 +1,13 @@
+<%- | String $var1,
+      Optional[String] $var2 = "Default value for template variable var2"
+| -%>
+
+I am an ENC variable: <%= $encvariable %>
+I am a site.pp variable: <%= $siteppvariable %>
+I am a template variable (var1): <%= $var1 %>
+I am a template variable (var2): <%= $var2 %>
+I am a class variable: <%= $testtemplate::classvariable %>
+The OS of this machine from facter is <%= $facts[osfamily] %>
+This is a variable (using scope) from another class in the same module: <%= $testtemplate::newclass::var1 %>
+This is a variable (using scope) from another module: <%= $sampleclass::othermodulevariable %>
+
