@@ -1,0 +1,9 @@
+databases:
+  webdata1:
+   user: 'dbuser1'
+   password: 'dbpass1'
+   grant: 'ALL'
+
+profile::hiera_test::ssl: true
+profile::hiera_test::backups_enabled: true
+profile::hiera_test::site_alias: ci.example.com
